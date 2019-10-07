@@ -1,0 +1,28 @@
+
+
+# App Properties
+ip-address-cors: 172.18.15.222
+url-influxdb: http://172.18.4.185:8086
+url-api-auth: /**
+grokonez:
+        app:
+            jwtSecret: jwtGrokonezSecretKey
+            jwtExpiration: 86400
+spring:
+  profiles:
+    active: development
+  # Database
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://172.18.4.185:5432/vehicle
+    username: vehicle
+    password: 123456
+  # JPA properties
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    open-in-view: false
+    generate-ddl: false
